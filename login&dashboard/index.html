@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up & Sign In</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sign-Up Form -->
+      <div id="sign-up-form" class="form-wrapper active">
+        <h2 class="form-title">Create Account</h2>
+        <div class="form__icons">
+          <img
+            src="signupFormImages/facebook-svgrepo-com (1).svg"
+            alt=""
+            class="form__icon"
+          />
+          <img
+            src="signupFormImages/linkedin-svgrepo-com (1).svg"
+            alt=""
+            class="form__icon"
+          />
+          <img
+            src="signupFormImages/twitter-svgrepo-com (1).svg"
+            alt=""
+            class="form__icon"
+          />
+        </div>
+        <form id="signUpForm">
+          <input type="text" id="name" placeholder="Full Name" required />
+          <input type="text" id="username" placeholder="Username" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <div class="button-container">
+            <button type="submit" id="button" class="form-button">
+              Sign Up
+            </button>
+          </div>
+        </form>
+
+        <button class="switch-button" id="showSignIn">
+          Already have an account? Sign In
+        </button>
+      </div>
+
+      <!-- Sign-In Form -->
+      <div id="sign-in-form" class="form-wrapper">
+        <h2 class="form-title">Sign In</h2>
+        <form id="signInForm">
+          <input type="email" id="loginEmail" placeholder="Email" required />
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Password"
+            required
+          />
+          <div class="button-container">
+            <button type="submit" id="button" class="form-button">Login</button>
+          </div>
+        </form>
+        <button class="switch-button" id="showSignUp">
+          Don't have an account? Sign Up
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

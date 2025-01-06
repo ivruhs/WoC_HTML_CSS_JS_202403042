@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<!-- Coding by CodingNepal - youtube.com/@codingnepal -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>Udemy| @ivruhs</title>
+    <!-- Linking Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <!-- linking google fonts for icons-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward"
+    />
+
+    <!-- Linking Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="dashboardstyle.css" />
+  </head>
+  <body>
+    <!-- Header / Navbar -->
+    <header>
+      <nav class="navbar">
+        <a href="#" class="nav-logo">
+          <h2 class="logo-text">🖥️ LOGO</h2>
+        </a>
+
+        <ul class="nav-menu">
+          <button id="menu-close-button" class="fas fa-times"></button>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Enquiry Us</a>
+          </li>
+          <li class="nav-item">
+            <a onclick="logout()" class="nav-link">Logout</a>
+          </li>
+        </ul>
+
+        <button id="menu-open-button" class="fas fa-bars"></button>
+      </nav>
+    </header>
+
+    <div class="header-body">
+      <div class="header-container">
+        <!-- Image Container -->
+        <div class="image-container">
+          <img src="images/img-1.png" alt="" />
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+          <div class="progress-text">100+<br />Students</div>
+        </div>
+
+        <!-- Text Container -->
+        <div class="text-container">
+          <h1 id="greeting">Welcome to Dhoom Dhadaka, @username</h1>
+          <p>
+            Udemy is your ultimate education portal, offering top-notch courses
+            and resources to enhance your learning experience. Explore a variety
+            of subjects, learn from industry experts, and take your skills to
+            the next level.
+          </p>
+          <a href="#" class="neon-button">Explore Courses</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="our-courses">
+      <h1 id="elementEl" class="our-tutors-heading">OUR COURSES</h1>
+      <div class="body-our-tutors">
+        <div class="container swiper">
+          <div class="slider-wrapper">
+            <div class="card-list swiper-wrapper">
+              <div class="card-item swiper-slide">
+                <img
+                  src="imagesCourses/designer.jpg"
+                  alt="User Image"
+                  class="user-image"
+                />
+                <a href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Graphic <br />
+                  Designing
+                </a>
+                <h2 class="user-name">James Wilson</h2>
+                <button class="card-button material-symbols-rounded">
+                  arrow_forward
+                </button>
+              </div>
+
+              <div class="card-item swiper-slide">
+                <img
+                  src="imagesCourses/developer.jpg"
+                  alt="User Image"
+                  class="user-image"
+                />
+                <a href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Web <br />
+                  Development
+                </a>
+                <h2 class="user-name">James Wilson</h2>
+                <button class="card-button material-symbols-rounded">
+                  arrow_forward
+                </button>
+              </div>
+
+              <div class="card-item swiper-slide">
+                <img
+                  src="imagesCourses/editor.jpg"
+                  alt="User Image"
+                  class="user-image"
+                />
+                <a href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Video <br />
+                  Editing
+                </a>
+                <h2 class="user-name">James Wilson</h2>
+                <button class="card-button material-symbols-rounded">
+                  arrow_forward
+                </button>
+              </div>
+
+              <div class="card-item swiper-slide">
+                <img
+                  src="imagesCourses/gamer.jpg"
+                  alt="User Image"
+                  class="user-image"
+                />
+                <a href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Data <br />
+                  Analytics
+                </a>
+                <h2 class="user-name">James Wilson</h2>
+                <button class="card-button material-symbols-rounded">
+                  arrow_forward
+                </button>
+              </div>
+
+              <div class="card-item swiper-slide">
+                <img
+                  src="imagesCourses/marketer.jpg"
+                  alt="User Image"
+                  class="user-image"
+                />
+                <a href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Database <br />
+                  Management
+                </a>
+                <h2 class="user-name">James Wilson</h2>
+                <button class="card-button material-symbols-rounded">
+                  arrow_forward
+                </button>
+              </div>
+
+              <div class="card-item swiper-slide">
+                <img
+                  src="imagesCourses/designer.jpg"
+                  alt="User Image"
+                  class="user-image"
+                />
+                <a href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Cyber <br />
+                  Security
+                </a>
+                <h2 class="user-name">James Wilson</h2>
+                <button class="card-button material-symbols-rounded">
+                  arrow_forward
+                </button>
+              </div>
+
+              <div class="card-item swiper-slide">
+                <img
+                  src="imagesCourses/developer.jpg"
+                  alt="User Image"
+                  class="user-image"
+                />
+                <a href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Ethical <br />
+                  Hacking
+                </a>
+                <h2 class="user-name">James Wilson</h2>
+                <button class="card-button material-symbols-rounded">
+                  arrow_forward
+                </button>
+              </div>
+
+              <div class="card-item swiper-slide">
+                <img
+                  src="imagesCourses/editor.jpg"
+                  alt="User Image"
+                  class="user-image"
+                />
+                <a href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  AI / <br />
+                  ML
+                </a>
+                <h2 class="user-name">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Impedit consectetur consequuntur ex?
+                </h2>
+                <button class="card-button material-symbols-rounded">
+                  arrow_forward
+                </button>
+              </div>
+            </div>
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-slide-button swiper-button-prev"></div>
+            <div class="swiper-slide-button swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="our-tutors">
+      <h1 id="elementEl" class="our-tutors-heading">OUR TUTORS</h1>
+      <div class="body-our-tutors">
+        <div class="container swiper">
+          <div class="slider-wrapper">
+            <div class="card-list swiper-wrapper">
+              <div class="card-item swiper-slide">
+                <img
+                  src="ourtutorimages/raju.png"
+                  alt="User Image"
+                  class="user-image"
+                />
+                <h2 class="user-name">Raju</h2>
+                <p class="user-profession">SoftWare Developer</p>
+                <a href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  5 + <br />
+                  Yrs Experience
+                </a>
+              </div>
+
+              <div class="card-item swiper-slide">
+                <img
+                  src="ourtutorimages/shyam.png"
+                  alt="User Image"
+                  class="user-image"
+                />
+                <h2 class="user-name">Shyam</h2>
+                <p class="user-profession">Software Developer</p>
+                <a href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  4 + <br />
+                  Yrs Experience
+                </a>
+              </div>
+
+              <div class="card-item swiper-slide">
+                <img
+                  src="ourtutorimages/baburao.png"
+                  alt="User Image"
+                  class="user-image"
+                />
+                <h2 class="user-name">Babu Rao</h2>
+                <p class="user-profession">Software Developer</p>
+                <a href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  10 + <br />
+                  Yrs Experience
+                </a>
+              </div>
+
+              <div class="card-item swiper-slide">
+                <img
+                  src="ourtutorimages/kachra seth.png"
+                  alt="User Image"
+                  class="user-image"
+                />
+                <h2 class="user-name">Kachra Seth</h2>
+                <p class="user-profession">SoftWare Developer</p>
+                <a href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  3 + <br />
+                  Yrs Experience
+                </a>
+              </div>
+
+              <div class="card-item swiper-slide">
+                <img
+                  src="ourtutorimages/pappu.png"
+                  alt="User Image"
+                  class="user-image"
+                />
+                <h2 class="user-name">Pappu</h2>
+                <p class="user-profession">SoftWare Developer</p>
+                <a href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  8 + <br />
+                  Yrs Experience
+                </a>
+              </div>
+
+              <div class="card-item swiper-slide">
+                <img
+                  src="ourtutorimages/totla seth.png"
+                  alt="User Image"
+                  class="user-image"
+                />
+                <h2 class="user-name">Totla Seth</h2>
+                <p class="user-profession">SoftWare Developer</p>
+                <a href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  5 + <br />
+                  Yrs Experience
+                </a>
+              </div>
+
+              <div class="card-item swiper-slide">
+                <img
+                  src="ourtutorimages/anjali.png"
+                  alt="User Image"
+                  class="user-image"
+                />
+                <h2 class="user-name">Anjali</h2>
+                <p class="user-profession">SoftWare Developer</p>
+                <a href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  7 + <br />
+                  Yrs Experience
+                </a>
+              </div>
+
+              <div class="card-item swiper-slide">
+                <img
+                  src="ourtutorimages/anuradha.png"
+                  alt="User Image"
+                  class="user-image"
+                />
+                <h2 class="user-name">Anuradha</h2>
+                <p class="user-profession">SoftWare Developer</p>
+                <a href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  3 + <br />
+                  Yrs Experience
+                </a>
+              </div>
+            </div>
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-slide-button swiper-button-prev"></div>
+            <div class="swiper-slide-button swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <!-- About Section -->
+      <div class="footer-section">
+        <h2>About Us</h2>
+        <p>
+          We are committed to delivering innovative solutions that empower and
+          transform businesses worldwide. Join us in shaping the future.
+        </p>
+      </div>
+
+      <!-- Links Section -->
+      <div class="footer-section">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Enquiry Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media Section -->
+      <div class="footer-section">
+        <h2>Follow Us</h2>
+        <div class="social-icons">
+          <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 . Designed with <span>&hearts;</span> by @IvRuHs.</p>
+      </div>
+    </footer>
+
+    <!-- Linking Swiper script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Linking custom script -->
+    <script src="dashboard.js"></script>
+  </body>
+</html>
