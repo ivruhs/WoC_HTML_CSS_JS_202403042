@@ -26,20 +26,20 @@ function logout() {
 //navigation bar ka code
 
 const navbarLinks = document.querySelectorAll(".nav-menu .nav-link");
-const menuOpenButton = document.querySelector("#menu-open-button");
-const menuCloseButton = document.querySelector("#menu-close-button");
+const menuOpenBtn = document.querySelector("#menu-open-button");
+const menuCloseBtn = document.querySelector("#menu-close-button");
 
-menuOpenButton.addEventListener("click", () => {
+menuOpenBtn.addEventListener("click", () => {
   // Toggle mobile menu visibility
   document.body.classList.toggle("show-mobile-menu");
 });
 
 // Close menu jab close button is clicked
-menuCloseButton.addEventListener("click", () => menuOpenButton.click());
+menuCloseBtn.addEventListener("click", () => menuOpenBtn.click());
 
 // Close menu jab nav link is clicked
 navbarLinks.forEach((link) => {
-  link.addEventListener("click", () => menuOpenButton.click());
+  link.addEventListener("click", () => menuOpenBtn.click());
 });
 
 /**********************************************************************************************************/
