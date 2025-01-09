@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Testimonial Slider</title>
+    <!-- Swiper CSS
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Linking Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="#" class="nav-logo">
+          <h2 class="logo-text">☕ LOGO</h2>
+        </a>
+
+        <ul class="nav-menu">
+          <button id="menu-close-button" class="fas fa-times"></button>
+
+          <li class="nav-item">
+            <a href="../login&dashboard/dashboard.html" class="nav-link"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="../aboutuspage/aboutus.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Enquiry Us</a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="../login&dashboard/index.html"
+              class="nav-link"
+              id="logout"
+              onclick="logout()"
+              >Logout</a
+            >
+          </li>
+        </ul>
+
+        <button id="menu-open-button" class="fas fa-bars"></button>
+      </nav>
+    </header>
+
+    <section class="container" id="testimonial_container">
+      <div class="testimonial mySwiper swiper">
+        <div class="testi-content swiper-wrapper" id="slides">
+          <div class="slide swiper-slide">
+            <img src="images/udemy_logo.webp" alt="" class="image" />
+            <h3>John Doe</h3>
+            <div class="stars">★★★★★</div>
+            <i class="bx bxs-quote-alt-left quote-icon"></i>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+              saepe provident dolorem a quaerat quo error facere nihil deleniti
+              eligendi ipsum adipisci, fugit, architecto amet asperiores
+              doloremque deserunt eum nemo.
+            </p>
+          </div>
+          <div class="slide swiper-slide">
+            <img src="images/udemy_logo.webp" alt="" class="image" />
+            <h3>Jane Smith</h3>
+            <div class="stars">★★★★☆</div>
+            <i class="bx bxs-quote-alt-left quote-icon"></i>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+              saepe provident dolorem a quaerat quo error facere nihil deleniti
+              eligendi ipsum adipisci, fugit, architecto amet asperiores
+              doloremque deserunt eum nemo.
+            </p>
+          </div>
+          <div class="slide swiper-slide">
+            <img src="images/udemy_logo.webp" alt="" class="image" />
+            <h3>Michael Brown</h3>
+            <div class="stars">★★★★★</div>
+            <i class="bx bxs-quote-alt-left quote-icon"></i>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+              saepe provident dolorem a quaerat quo error facere nihil deleniti
+              eligendi ipsum adipisci, fugit, architecto amet asperiores
+              doloremque deserunt eum nemo.
+            </p>
+          </div>
+        </div>
+        <div class="swiper-button-next nav-btn"></div>
+        <div class="swiper-button-prev nav-btn"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <button class="button" id="addReview">Add Your Review</button>
+
+      <div class="form-container" id="formContainer">
+        <form id="reviewForm">
+          <label for="name">Name</label>
+          <input type="text" id="name" required />
+
+          <label for="stars">Stars (1-5)</label>
+          <input type="number" id="stars" min="1" max="5" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" rows="4" required></textarea>
+
+          <div class="btn-container">
+            <button type="submit" class="submit-button">Submit Review</button>
+            <button class="close">Close Form</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <!-- About Section -->
+      <div class="footer-section">
+        <h2>About Us</h2>
+        <p>
+          We are committed to delivering innovative solutions that empower and
+          transform businesses worldwide. Join us in shaping the future.
+        </p>
+      </div>
+
+      <!-- Links Section -->
+      <div class="footer-section">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="../login&dashboard/dashboard.html">Home</a></li>
+          <li><a href="../aboutuspage/aboutus.html">About Us</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Enquiry Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media Section -->
+      <div class="footer-section">
+        <h2>Follow Us</h2>
+        <div class="social-icons">
+          <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 . Designed with <span>&hearts;</span> by @IvRuHs.</p>
+      </div>
+    </footer>
+
+    <!-- Swiper JS
+    <script src="js/swiper-bundle.min.js"></script> -->
+    <!-- Linking Swiper script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
