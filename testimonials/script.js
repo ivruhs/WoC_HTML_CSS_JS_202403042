@@ -49,21 +49,21 @@ const formContainer = document.getElementById("formContainer");
 const reviewForm = document.getElementById("reviewForm");
 const element = document.getElementById("testimonial_container");
 
-const USER_KEY = "userReview"; // Key for storing all reviews in localStorage
+const USER_KEY = "userReview"; // key for storing all reviews in localStorage
 
-// Get the logged-in user
+// logged-in user ko laao
 let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser")) || {};
 
-// Check if user has already submitted a review
+// check kar ki user ne pehle se review to nai diya na
 function checkReviewStatus() {
   const storedReviews = JSON.parse(localStorage.getItem(USER_KEY)) || {};
 
-  // Check if the logged-in user's email is in the stored reviews
+  // check ki logged-in user ka email, stored reviews me hain ya nai
   if (loggedInUser.email && storedReviews[loggedInUser.email]) {
     addReviewButton.disabled = true;
     addReviewButton.textContent = "Review Submitted";
 
-    // Load the user's review into the Swiper
+    // user ka review dynamically slider me insert karo
     const userReview = storedReviews[loggedInUser.email];
     const newSlide = document.createElement("div");
     newSlide.classList.add("swiper-slide", "slide");
@@ -83,14 +83,14 @@ function checkReviewStatus() {
 
 checkReviewStatus();
 
-// Show the review form
+// show the review form
 addReviewButton.addEventListener("click", () => {
   formContainer.style.display = "block";
   formContainer.scrollIntoView({ behavior: "smooth" });
   element.style.height = "100%";
 });
 
-// Add a new review
+// for adding new review
 reviewForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -100,7 +100,7 @@ reviewForm.addEventListener("submit", (e) => {
 
   const storedReviews = JSON.parse(localStorage.getItem(USER_KEY)) || {};
 
-  // Check if the user already submitted a review
+  // check kar ki user ne pehle se review to nai daal rakha
   if (loggedInUser.email && storedReviews[loggedInUser.email]) {
     alert("You have already submitted a review.");
     formContainer.style.display = "none";
@@ -108,12 +108,12 @@ reviewForm.addEventListener("submit", (e) => {
     return;
   }
 
-  // Save the new review
+  // new review ko save karo
   const userReview = { name, stars, message };
   storedReviews[loggedInUser.email] = userReview;
   localStorage.setItem(USER_KEY, JSON.stringify(storedReviews));
 
-  // Add the new review as a slide
+  // add new review as a form of slide
   const newSlide = document.createElement("div");
   newSlide.classList.add("swiper-slide", "slide");
   newSlide.innerHTML = `
@@ -126,7 +126,7 @@ reviewForm.addEventListener("submit", (e) => {
   swiper.appendSlide(newSlide);
   swiper.update();
 
-  // Update the form and button states
+  // update the form and button states
   formContainer.style.display = "none";
   reviewForm.reset();
   addReviewButton.disabled = true;
@@ -136,7 +136,7 @@ reviewForm.addEventListener("submit", (e) => {
   element.style.height = "100vh";
 });
 
-// Close the review form
+// close the review form
 const closeBtn = document.getElementsByClassName("close")[0];
 closeBtn.addEventListener("click", (e) => {
   e.preventDefault();
