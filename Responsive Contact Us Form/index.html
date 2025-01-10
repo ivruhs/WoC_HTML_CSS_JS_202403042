@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsive Contact Us Form | CodingLab</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Linking Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <!-- Fontawesome CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="#" class="nav-logo">
+          <h2 class="logo-text">☕ LOGO</h2>
+        </a>
+
+        <ul class="nav-menu">
+          <button id="menu-close-button" class="fas fa-times"></button>
+
+          <li class="nav-item">
+            <a href="../login&dashboard/dashboard.html" class="nav-link"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="../aboutuspage/aboutus.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a href="../testimonials/index.html" class="nav-link">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Enquiry Us</a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="../login&dashboard/index.html"
+              class="nav-link"
+              id="logout"
+              onclick="logout()"
+              >Logout</a
+            >
+          </li>
+        </ul>
+
+        <button id="menu-open-button" class="fas fa-bars"></button>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Enquiry Us 📨</h1>
+    </section>
+
+    <div class="contact-us">
+      <div class="container">
+        <div class="content">
+          <div class="left-side">
+            <div class="address details">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="topic">Address</div>
+              <div class="text-one">Surkhet, NP12</div>
+              <div class="text-two">Birendranagar 06</div>
+            </div>
+            <div class="phone details">
+              <i class="fas fa-phone-alt"></i>
+              <div class="topic">Phone</div>
+              <div class="text-one">+0098 9893 5647</div>
+              <div class="text-two">+0096 3434 5678</div>
+            </div>
+            <div class="email details">
+              <i class="fas fa-envelope"></i>
+              <div class="topic">Email</div>
+              <div class="text-one">codinglab@gmail.com</div>
+              <div class="text-two">info.codinglab@gmail.com</div>
+            </div>
+          </div>
+          <div class="right-side" id="form-container">
+            <div class="topic-text">Send us a message</div>
+            <p>
+              If you have any work or queries related to Udemy, feel free to
+              send us a message. We're happy to assist!
+            </p>
+            <form id="contact-form">
+              <div class="input-box">
+                <input type="text" placeholder="Enter your name" required />
+              </div>
+              <div class="input-box">
+                <input type="email" placeholder="Enter your email" required />
+              </div>
+              <div class="input-box message-box">
+                <textarea placeholder="Enter your message" required></textarea>
+              </div>
+              <div class="button">
+                <input type="submit" value="Send Now" />
+              </div>
+            </form>
+          </div>
+          <div class="right-side hidden" id="thank-you-container">
+            <div class="topic-text">Thank You!</div>
+            <p>
+              Thank you for contacting us. We will get back to you very soon.
+            </p>
+            <div class="button">
+              <button id="enquiry-button">Enquiry</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <!-- About Section -->
+      <div class="footer-section">
+        <h2>About Us</h2>
+        <p>
+          We are committed to delivering innovative solutions that empower and
+          transform businesses worldwide. Join us in shaping the future.
+        </p>
+      </div>
+
+      <!-- Links Section -->
+      <div class="footer-section">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="../login&dashboard/dashboard.html">Home</a></li>
+          <li><a href="../aboutuspage/aboutus.html">About Us</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="../testimonials/index.html">Reviews</a></li>
+          <li><a href="#">Enquiry Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media Section -->
+      <div class="footer-section">
+        <h2>Follow Us</h2>
+        <div class="social-icons">
+          <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 . Designed with <span>&hearts;</span> by @IvRuHs.</p>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
