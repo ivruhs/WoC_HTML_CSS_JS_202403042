@@ -362,7 +362,7 @@ header .navbar {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    padding-top: 300px;
+    padding-top: 20em;
   }
 
   .image-container {
@@ -387,6 +387,15 @@ header .navbar {
 
   .neon-button {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 466px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-top: 25em;
   }
 }
 
