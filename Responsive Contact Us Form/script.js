@@ -17,7 +17,7 @@ navbarLinks.forEach((link) => {
   link.addEventListener("click", () => menuOpenBtn.click());
 });
 
-//////////
+/**************** Handling Form Submission **************************/
 
 document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.getElementById("contact-form");
@@ -25,20 +25,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const thankYouContainer = document.getElementById("thank-you-container");
   const enquiryButton = document.getElementById("enquiry-button");
 
-  // Handle form submission
+  // Handle form ka submission
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
     formContainer.classList.add("hidden");
     thankYouContainer.classList.remove("hidden");
   });
 
-  // Handle Enquiry button click
+  // Handle clicking of Enquiry button
   enquiryButton.addEventListener("click", () => {
     contactForm.reset(); // Reset the form fields
     thankYouContainer.classList.add("hidden");
     formContainer.classList.remove("hidden");
   });
 });
+
+/**********************************************************************************************************/
 
 // logout function hoga wapas index.html wale page pe jaane ke liye
 function logout() {

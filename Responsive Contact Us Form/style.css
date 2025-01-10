@@ -7,6 +7,239 @@
   font-family: "Poppins", sans-serif;
 }
 
+/**-----------------------------------------**/
+
+/*--------------- General Styles -------------------------*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*----------------------Apna NavBar --------------------------------------------*/
+.navbar ul {
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.navbar img {
+  width: 100%;
+}
+
+.navbar :where(section, footer) .section-content {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1300px;
+}
+
+.navbar section .section-title {
+  text-align: center;
+  padding: 60px 0 100px;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.navbar section .section-title::after {
+  content: "";
+  width: 80px;
+  height: 5px;
+  display: block;
+  margin: 10px auto 0;
+  background: #00ffcc;
+  border-radius: 8px;
+}
+
+/*--------------- Navbar ki styling -----------------------*/
+header {
+  z-index: 5;
+  width: 100%;
+  position: fixed;
+  background: #2c2b2b;
+  height: 5.5em;
+}
+
+header .navbar {
+  display: flex;
+  padding: 0px;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-between;
+  max-width: 1300px;
+}
+
+.navbar .nav-logo .logo-text {
+  padding-top: 0.5em;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.navbar .nav-menu {
+  padding-top: 1em;
+  gap: 10px;
+  display: flex;
+}
+
+.navbar .logo-text {
+  margin-left: 0.5em;
+}
+
+.navbar .nav-menu .nav-link {
+  background-color: #000000;
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+  box-shadow: #ffffff 4px 4px 0 0;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 1em;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.navbar .nav-menu .nav-link:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.navbar .nav-menu .nav-link:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+.navbar #menu-open-button,
+#menu-close-button {
+  display: none;
+  color: #2c2b2b;
+}
+
+#logout {
+  margin-right: 1em;
+}
+
+/*----------------------Responsiveness ---------------------------------*/
+@media screen and (max-width: 940px) {
+  body.show-mobile-menu {
+    overflow: hidden;
+  }
+
+  body.show-mobile-menu header::before {
+    content: "";
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar :is(#menu-open-button, #menu-close-button) {
+    font-size: 1.3rem;
+    margin-right: 1em;
+    display: block;
+  }
+
+  .navbar :is(#menu-open-button):hover {
+    color: #00ffcc !important;
+  }
+  .navbar :is(#menu-close-button):hover {
+    color: #ffffff !important;
+  }
+
+  .navbar #menu-open-button {
+    color: #fff;
+  }
+
+  .navbar .nav-menu #menu-close-button {
+    position: absolute;
+    right: 10px;
+    top: 30px;
+  }
+
+  .navbar .nav-menu {
+    display: block;
+    background: #00ffcc;
+    position: fixed;
+    top: -15px;
+    left: -340px;
+    height: 100%;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+    transition: left 0.2s ease;
+  }
+
+  body.show-mobile-menu .nav-menu {
+    left: 0;
+  }
+
+  .navbar .nav-menu .nav-link {
+    display: block;
+    margin-top: 17px;
+    padding: 5px 10px;
+    color: white;
+    font-size: 1.3rem;
+  }
+}
+
+/*----------------------------- Hero Section ------------------------------------------------------------*/
+.hero {
+  padding-top: 6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  background: url(about-us-bg.png) center/cover no-repeat;
+  position: relative;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 3em;
+  z-index: 1;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+/*--------------Enquiry Us ka form-----------------------------*/
+
 .contact-us {
   min-height: 100vh;
   width: 100%;
@@ -180,257 +413,15 @@
   }
 }
 
-/* /// */
-
-/**-----------------------------------------**/
-
-/* General Styles */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #000;
-  color: #fff;
-  overflow-x: hidden;
-}
-
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/*----------------------Apna NavBar --------------------------------------------*/
-.navbar ul {
-  list-style: none;
-}
-
-.navbar a {
-  text-decoration: none;
-}
-
-.navbar button {
-  cursor: pointer;
-  background: none;
-  border: none;
-}
-
-.navbar img {
-  width: 100%;
-}
-
-.navbar :where(section, footer) .section-content {
-  margin: 0 auto;
-  padding: 0 20px;
-  max-width: 1300px;
-}
-
-.navbar section .section-title {
-  text-align: center;
-  padding: 60px 0 100px;
-  text-transform: uppercase;
-  font-size: 2rem;
-}
-
-.navbar section .section-title::after {
-  content: "";
-  width: 80px;
-  height: 5px;
-  display: block;
-  margin: 10px auto 0;
-  background: #00ffcc;
-  border-radius: 8px;
-}
-
-/* Navbar styling */
-header {
-  z-index: 5;
-  width: 100%;
-  position: fixed;
-  background: #2c2b2b;
-  height: 5.5em;
-}
-
-header .navbar {
-  display: flex;
-  padding: 0px;
-  align-items: center;
-  margin: 0 auto;
-  justify-content: space-between;
-  max-width: 1300px;
-}
-
-.navbar .nav-logo .logo-text {
-  padding-top: 0.5em;
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-.navbar .nav-menu {
-  padding-top: 1em;
-  gap: 10px;
-  display: flex;
-}
-
-.navbar .logo-text {
-  margin-left: 0.5em;
-}
-
-.navbar .nav-menu .nav-link {
-  background-color: #000000;
-  border: 2px solid #ffffff;
-  border-radius: 30px;
-  box-shadow: #ffffff 4px 4px 0 0;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 0 1em;
-  line-height: 50px;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.navbar .nav-menu .nav-link:hover {
-  background-color: #fff;
-  color: #000;
-}
-
-.navbar .nav-menu .nav-link:active {
-  box-shadow: #422800 2px 2px 0 0;
-  transform: translate(2px, 2px);
-}
-
-.navbar #menu-open-button,
-#menu-close-button {
-  display: none;
-  color: #2c2b2b;
-}
-
-#logout {
-  margin-right: 1em;
-}
-
-/*---------------------- Responsiveness ---------------------------------*/
-@media screen and (max-width: 1024px) {
-  .menu-section .menu-list {
-    gap: 60px;
-  }
-
-  .menu-section .menu-list .menu-item {
-    width: calc(100% / 3 - 60px);
-  }
-}
-
-/*----------------------Responsiveness ---------------------------------*/
-@media screen and (max-width: 940px) {
-  body.show-mobile-menu {
-    overflow: hidden;
-  }
-
-  body.show-mobile-menu header::before {
-    content: "";
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    backdrop-filter: blur(5px);
-    background: rgba(0, 0, 0, 0.2);
-  }
-
-  .navbar :is(#menu-open-button, #menu-close-button) {
-    font-size: 1.3rem;
-    margin-right: 1em;
-    display: block;
-  }
-
-  .navbar :is(#menu-open-button):hover {
-    color: #00ffcc !important;
-  }
-  .navbar :is(#menu-close-button):hover {
-    color: #ffffff !important;
-  }
-
-  .navbar #menu-open-button {
-    color: #fff;
-  }
-
-  .navbar .nav-menu #menu-close-button {
-    position: absolute;
-    right: 10px;
-    top: 30px;
-  }
-
-  .navbar .nav-menu {
-    display: block;
-    background: #00ffcc;
-    position: fixed;
-    top: -15px;
-    left: -340px;
-    height: 100%;
-    width: 300px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 100px;
-    transition: left 0.2s ease;
-  }
-
-  body.show-mobile-menu .nav-menu {
-    left: 0;
-  }
-
-  .navbar .nav-menu .nav-link {
-    display: block;
-    margin-top: 17px;
-    padding: 5px 10px;
-    color: white;
-    font-size: 1.3rem;
-  }
-}
-
 /*--------------------------------------------------------------------------------------------------------------*/
+
+/* ------------ extra css for our js file-------------------*/
 
 .hidden {
   display: none;
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
-
-/*----------------------------- Hero Section ------------------------------------------------------------*/
-.hero {
-  padding-top: 6em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50vh;
-  background: url(about-us-bg.png) center/cover no-repeat;
-  position: relative;
-  text-align: center;
-}
-.hero h1 {
-  font-size: 3em;
-  z-index: 1;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 0;
-}
 
 /*--------------------------------- Footer Styling ---------------------------------*/
 

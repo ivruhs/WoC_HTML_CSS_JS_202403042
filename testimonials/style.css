@@ -366,17 +366,6 @@ header .navbar {
   margin-right: 1em;
 }
 
-/*---------------------- Responsiveness ---------------------------------*/
-@media screen and (max-width: 1024px) {
-  .menu-section .menu-list {
-    gap: 60px;
-  }
-
-  .menu-section .menu-list .menu-item {
-    width: calc(100% / 3 - 60px);
-  }
-}
-
 /*----------------------Responsiveness ---------------------------------*/
 @media screen and (max-width: 940px) {
   body.show-mobile-menu {
