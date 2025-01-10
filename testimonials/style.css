@@ -8,6 +8,32 @@
   font-family: "Poppins", sans-serif;
 }
 
+/*----------------------------- Header Section ------------------------------------------------------------*/
+.hero {
+  padding-top: 6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  background: url(../aboutuspage/images/about-us-bg.png) center/cover no-repeat;
+  position: relative;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 3em;
+  z-index: 1;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
 .container {
   background: linear-gradient(rgba(48, 48, 48, 0.742), rgba(47, 47, 47, 0.742)),
     url("images/testimonials_bg.webp");
