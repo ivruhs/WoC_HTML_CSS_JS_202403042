@@ -9,17 +9,17 @@ menuOpenBtn.addEventListener("click", () => {
   document.body.classList.toggle("show-mobile-menu");
 });
 
-// Close menu when close button dabaya ho
+// Close menu when close button is clicked
 menuCloseBtn.addEventListener("click", () => menuOpenBtn.click());
 
-// Close menu when nav link dabaya ho
+// Close menu when nav link is clicked
 navbarLinks.forEach((link) => {
   link.addEventListener("click", () => menuOpenBtn.click());
 });
 
 ////////////////////////// logout function ////////////////////////////////////
 
-// logout function to navigate back to index.html
+// logout function to go back to index.html page
 function logout() {
   // Remove logged-in user from localStorage
   localStorage.removeItem("loggedInUser");
@@ -51,19 +51,19 @@ const element = document.getElementById("testimonial_container");
 
 const USER_KEY = "userReview"; // key for storing all reviews in localStorage
 
-// logged-in user ko laao
+// retrieve the logged-in user
 let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser")) || {};
 
-// check kar ki user ne pehle se review to nai diya na
+// check if user hasn't given any review before
 function checkReviewStatus() {
   const storedReviews = JSON.parse(localStorage.getItem(USER_KEY)) || {};
 
-  // check ki logged-in user ka email, stored reviews me hain ya nai
+  // check if logged-in user's email is present in the stored reviews or not
   if (loggedInUser.email && storedReviews[loggedInUser.email]) {
     addReviewButton.disabled = true;
     addReviewButton.textContent = "Review Submitted";
 
-    // user ka review dynamically slider me insert karo
+    // dynamically insert user's review in the slider
     const userReview = storedReviews[loggedInUser.email];
     const newSlide = document.createElement("div");
     newSlide.classList.add("swiper-slide", "slide");
@@ -100,7 +100,7 @@ reviewForm.addEventListener("submit", (e) => {
 
   const storedReviews = JSON.parse(localStorage.getItem(USER_KEY)) || {};
 
-  // check kar ki user ne pehle se review to nai daal rakha
+  // check if user hasn't given any review before
   if (loggedInUser.email && storedReviews[loggedInUser.email]) {
     alert("You have already submitted a review.");
     formContainer.style.display = "none";
@@ -108,7 +108,7 @@ reviewForm.addEventListener("submit", (e) => {
     return;
   }
 
-  // new review ko save karo
+  // save new review
   const userReview = { name, stars, message };
   storedReviews[loggedInUser.email] = userReview;
   localStorage.setItem(USER_KEY, JSON.stringify(storedReviews));
