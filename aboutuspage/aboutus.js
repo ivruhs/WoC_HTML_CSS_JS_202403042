@@ -1,4 +1,4 @@
-//////////////////// navbar ke liye js ////////////////////////////////
+//////////////////// js code for navbar ////////////////////////////////
 
 const navbarLinks = document.querySelectorAll(".nav-menu .nav-link");
 const menuOpenBtn = document.querySelector("#menu-open-button");
@@ -9,19 +9,19 @@ menuOpenBtn.addEventListener("click", () => {
   document.body.classList.toggle("show-mobile-menu");
 });
 
-// Close menu when close button dabaya ho
+// Close menu when close button is clicked
 menuCloseBtn.addEventListener("click", () => menuOpenBtn.click());
 
-// Close menu when nav link dabaya ho
+// Close menu when nav link is clicked
 navbarLinks.forEach((link) => {
   link.addEventListener("click", () => menuOpenBtn.click());
 });
 
 ////////////////////////// logout function ////////////////////////////////////
 
-// logout function hoga wapas index.html wale page pe jaane ke liye
+// logout function is to go back to index.html page
 function logout() {
-  // Remove karo logged-in user ko localStorage se
+  // Remove logged-in user from localStorage
   localStorage.removeItem("loggedInUser");
 
   // Go back to the sign-in page
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
       element.textContent = `${counter}+`;
 
       if (counter === 300) {
-        setTimeout(updateCounter, 5000); // loop ke baad 5s ka break
+        setTimeout(updateCounter, 5000); // 5s break after the loop
       } else {
         setTimeout(updateCounter, 20);
       }
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
       element.textContent = `${counter}+`;
 
       if (counter === 10) {
-        setTimeout(updateCounter, 5000); // loop ke baad 5s ka break
+        setTimeout(updateCounter, 5000); // 5s break after the loop
       } else {
         setTimeout(updateCounter, 600);
       }
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
       element.textContent = `${counter}+`;
 
       if (counter === 50) {
-        setTimeout(updateCounter, 5000); // loop ke baad 5s ka break
+        setTimeout(updateCounter, 5000); // 5s break after the loop
       } else {
         setTimeout(updateCounter, 120);
       }
