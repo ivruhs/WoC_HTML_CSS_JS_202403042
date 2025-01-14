@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- Linking Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <!-- Fontawesome CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Online Course Platform</title>
+  </head>
+
+  <body>
+    <section>
+      <nav class="navbar">
+        <a href="#" class="nav-logo">
+          <h2 class="logo-text">☕ LOGO</h2>
+        </a>
+
+        <ul class="nav-menu">
+          <button id="menu-close-button" class="fas fa-times"></button>
+
+          <li class="nav-item">
+            <a href="../login&dashboard/dashboard.html" class="nav-link"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="../aboutuspage/aboutus.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a href="../testimonials/index.html" class="nav-link">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a href="../Responsive Contact Us Form/index.html" class="nav-link"
+              >Enquiry Us</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              href="../login&dashboard/index.html"
+              class="nav-link"
+              id="logout"
+              onclick="logout()"
+              >Logout</a
+            >
+          </li>
+        </ul>
+
+        <button id="menu-open-button" class="fas fa-bars"></button>
+      </nav>
+    </section>
+
+    <header>
+      <h1 data-text="Udemy Courses">UDEMY Courses</h1>
+      <div class="wallet-info">
+        <span>
+          <i class="fas fa-wallet custom-icon"></i> :
+          <strong id="wallet-amount"> 1000 </strong><i class="fas fa-coins"></i
+        ></span>
+        <span
+          ><i class="fas fa-graduation-cap"></i> :
+          <strong id="courses-enrolled">0</strong></span
+        >
+      </div>
+    </header>
+
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search Courses..." />
+      <select id="sort-options">
+        <option value="none">Sort by</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+        <option value="az">Alphabetical: A-Z</option>
+        <option value="za">Alphabetical: Z-A</option>
+      </select>
+      <select id="course-type">
+        <option value="all">All Courses</option>
+        <option value="free">Free Courses</option>
+        <option value="paid">Paid Courses</option>
+      </select>
+    </div>
+
+    <main id="course-container" class="course-container">
+      <!-- Course cards yaha pe dynamically generate hoge -->
+    </main>
+
+    <div id="course-modal" class="modal">
+      <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <h2 id="modal-heading"></h2>
+        <p id="modal-description"></p>
+        <p>Price: <span id="modal-price"></span> Coins</p>
+        <div id="subtopics-container" class="subtopics-container">
+          <button id="reset-progress" class="reset-progress">
+            Reset Progress
+          </button>
+          <div id="subtopics-list"></div>
+          <div class="progress-bar">
+            <div id="progress" class="progress"></div>
+          </div>
+          <span id="progress-text">0/5 topics completed</span>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <!-- About Section -->
+      <div class="footer-section">
+        <h2>About Us</h2>
+        <p>
+          We are committed to delivering innovative courses that empower and
+          transform education worldwide. Join us in shaping the future.
+        </p>
+      </div>
+
+      <!-- Links Section -->
+      <div class="footer-section">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="../login&dashboard/dashboard.html">Home</a></li>
+          <li><a href="../aboutuspage/aboutus.html">About Us</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="../testimonials/index.html">Reviews</a></li>
+          <li>
+            <a href="../Responsive Contact Us Form/index.html">Enquiry Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Social Media Section -->
+      <div class="footer-section">
+        <h2>Follow Us</h2>
+        <div class="social-icons">
+          <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 . Designed with <span>&hearts;</span> by @IvRuHs.</p>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
