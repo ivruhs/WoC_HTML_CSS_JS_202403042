@@ -1,18 +1,18 @@
-// Retrieve the logged-in user from localStorage
+// getting back/retrieving the logged-in user from localStorage
 const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
 if (loggedInUser) {
-  // greeting display kar dege with user's name
+  // greet user with his name
   document.getElementById(
     "greeting"
   ).textContent = `Welcome to Udemy, ${loggedInUser.name}!`;
 } else {
-  // Redirect to sign-in page agar no user logged in
+  // Redirect to sign-in page if no user logged in
   alert("No user logged in. Redirecting to Sign In.");
   window.location.href = "index.html";
 }
 
-// logout function hoga wapas index.html wale page pe jaane ke liye
+// logout function to go back to index.html page
 function logout() {
   // Remove the logged-in user from localStorage
   localStorage.removeItem("loggedInUser");
@@ -23,7 +23,7 @@ function logout() {
 
 /**********************************************************************************************************/
 
-//navigation bar ka code
+//navigation bar js code
 
 const navbarLinks = document.querySelectorAll(".nav-menu .nav-link");
 const menuOpenBtn = document.querySelector("#menu-open-button");
@@ -34,10 +34,10 @@ menuOpenBtn.addEventListener("click", () => {
   document.body.classList.toggle("show-mobile-menu");
 });
 
-// Close menu jab close button is clicked
+// Close menu when close button is clicked
 menuCloseBtn.addEventListener("click", () => menuOpenBtn.click());
 
-// Close menu jab nav link is clicked
+// Close menu when nav link is clicked
 navbarLinks.forEach((link) => {
   link.addEventListener("click", () => menuOpenBtn.click());
 });
