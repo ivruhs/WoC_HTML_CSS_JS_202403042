@@ -32,7 +32,7 @@ document.getElementById("signUpForm").addEventListener("submit", (event) => {
     return;
   }
 
-  // Add new user to the array
+  // Add new user to array
   users.push({ name, email, password });
   localStorage.setItem("users", JSON.stringify(users));
 
@@ -65,7 +65,7 @@ document.getElementById("signInForm").addEventListener("submit", (event) => {
   );
 
   if (user) {
-    // Save logged-in user details
+    // Save the logged-in user details
     localStorage.setItem("loggedInUser", JSON.stringify(user));
     alert("Sign-In Successful!");
     window.location.href = "dashboard.html"; // Redirect to dashboard
