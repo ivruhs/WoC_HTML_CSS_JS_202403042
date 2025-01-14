@@ -1,4 +1,4 @@
-//////////////////// navbar ke liye js ////////////////////////////////
+//////////////////// navbar js code ////////////////////////////////
 
 const navbarLinks = document.querySelectorAll(".nav-menu .nav-link");
 const menuOpenBtn = document.querySelector("#menu-open-button");
@@ -9,10 +9,10 @@ menuOpenBtn.addEventListener("click", () => {
   document.body.classList.toggle("show-mobile-menu");
 });
 
-// Close menu when close button dabaya ho
+// Close menu when close button is clicked
 menuCloseBtn.addEventListener("click", () => menuOpenBtn.click());
 
-// Close menu when nav link dabaya ho
+// Close menu when nav link is clicked
 navbarLinks.forEach((link) => {
   link.addEventListener("click", () => menuOpenBtn.click());
 });
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /**********************************************************************************************************/
 
-// logout function hoga wapas index.html wale page pe jaane ke liye
+// logout function to go back to index.html page
 function logout() {
   // Remove the logged-in user from localStorage
   localStorage.removeItem("loggedInUser");
