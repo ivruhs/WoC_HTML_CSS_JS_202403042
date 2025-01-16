@@ -45,7 +45,22 @@ navbarLinks.forEach((link) => {
 /**********************************************************************************************************/
 
 // Progress Bar Script
+// const circle = document.querySelector(".progress-container");
+// let progress = 0;
+
+// function updateProgress() {
+//   progress += 1;
+//   if (progress > 100) progress = 0;
+
+//   // Update CSS variable for the progress
+//   circle.style.setProperty("--progress", `${progress}%`);
+// }
+
+// setInterval(updateProgress, 50); // Adjust speed as needed
+
+// Progress Bar Script
 const circle = document.querySelector(".progress-container");
+const progressText = document.querySelector(".progress-text");
 let progress = 0;
 
 function updateProgress() {
@@ -54,9 +69,13 @@ function updateProgress() {
 
   // Update CSS variable for the progress
   circle.style.setProperty("--progress", `${progress}%`);
+
+  // Dynamically update the progress text
+  progressText.innerHTML = `${progress}+<br />Students`;
 }
 
-setInterval(updateProgress, 50); // Adjust speed as needed
+// Call updateProgress every 50ms
+setInterval(updateProgress, 50);
 
 /**********************************************************************************************************/
 
