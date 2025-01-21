@@ -64,7 +64,7 @@ section .section-title::after {
 
 /************************************      Navbar Styling    ******************************/
 header {
-  z-index: 5;
+  z-index: 300;
   width: 100%;
   position: fixed;
   background: #2c2b2b;
@@ -136,7 +136,7 @@ header .navbar {
 }
 
 /* Responsive media query code for max width 900px */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 905px) {
   body.show-mobile-menu {
     overflow: hidden;
   }
@@ -214,7 +214,8 @@ header .navbar {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow-x: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
   padding: 20px;
 }
 
@@ -346,7 +347,7 @@ header .navbar {
   box-shadow: 0 0 20px rgba(111, 249, 153, 0.8), 0 0 30px rgba(0, 255, 255, 0.8);
 }
 
-@media (max-width: 884px) {
+@media (max-width: 971px) {
   .image-container {
     height: 350px;
     width: 350px;
@@ -354,15 +355,26 @@ header .navbar {
 
   .header-container {
     padding-top: 100px;
+    /* height: 100%; */
+  }
+  .text-container {
+    width: 90%;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .text-container h1 {
+    font-size: 1.5rem;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 805px) {
   .header-container {
     flex-direction: column;
     align-items: center;
     gap: 15px;
     padding-top: 20em;
+    /* height: 100%; */
   }
 
   .image-container {
@@ -392,12 +404,19 @@ header .navbar {
 
 @media (max-width: 466px) {
   .header-container {
+    margin-top: 8em;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    padding-top: 25em;
+    /* margin-bottom: 24em; */
   }
 }
+
+/* @media (max-width: 466px) {
+  .header-container {
+    padding-top: 7em;
+    margin-bottom: 1em;
+  }
+} */
 
 /*****************************************************************************************************/
 
@@ -517,6 +536,7 @@ header .navbar {
   transition: 0.5s;
   letter-spacing: 4px;
   overflow: hidden;
+  font-size: smaller;
 }
 .our-courses a:hover {
   background: #464848;
@@ -675,6 +695,7 @@ header .navbar {
   color: #e3e3e3;
   font-weight: 500;
   margin: 14px 0 40px;
+  text-align: center;
 }
 .our-tutors .card-list .card-item .message-button {
   font-size: 1.25rem;
@@ -952,4 +973,184 @@ footer::before {
   .social-icons {
     justify-content: center;
   }
+}
+
+/* Chatbot Button */
+#chatbot-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #333333;
+  border: 2px solid #555555;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 255, 213, 0.2);
+  color: #00ffcc;
+  font-size: 24px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 200;
+}
+
+#chatbot-button:hover {
+  background-color: #555555;
+  transform: scale(1.1);
+}
+
+/* Chatbot Interface */
+
+#chatbot-interface {
+  display: none;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 350px;
+  height: 475px;
+  background: #1a1a1a;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 200;
+}
+
+#chatbot-header {
+  background: #4f4e4e;
+  color: #00ffcc;
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+  position: relative;
+  border-bottom: 1px solid #333333;
+}
+
+.fa-robot {
+  margin-left: 0.5em;
+}
+
+#chatbot-header #close-chat {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #eeeeee;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#chatbot-header #close-chat:hover {
+  color: #00ffcc;
+}
+
+#chatbot-body {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background: #262525;
+}
+
+#chatbot-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto; /* Enables vertical scrolling */
+  height: 475px;
+}
+
+#chatbot-footer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #333333;
+  background: #4f4e4e;
+}
+
+#reset-btn {
+  margin-left: auto;
+  background-color: #00ffd0;
+  color: #000000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#reset-btn:hover {
+  background-color: #267e7a;
+}
+
+/*Message Styles */
+.bot-message {
+  background: #2a2a2a;
+  padding: 10px;
+  border-radius: 10px;
+  align-self: flex-start;
+  color: #eeeeee;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.user-message {
+  background: #444444;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  align-self: flex-end;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.response-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background: #333333;
+  color: #eeeeee;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.response-button:hover {
+  background: #444444;
+}
+
+.response-button:disabled {
+  background-color: #555555;
+  color: #777777;
+  cursor: not-allowed;
+}
+
+ul.course-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.course-list li {
+  background: #2a2a2a;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #eeeeee;
+  transition: background-color 0.3s ease;
+}
+
+ul.course-list li:hover {
+  background: #333333;
 }

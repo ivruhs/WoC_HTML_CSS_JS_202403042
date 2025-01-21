@@ -66,6 +66,14 @@ a {
   animation: pulse 2s infinite;
   transition: transform 0.3s;
 }
+
+@media screen and (max-width: 466px) {
+  .about img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
 .about img:hover {
   transform: scale(1.1);
   box-shadow: 0 0 40px #00ffcc;
@@ -434,6 +442,13 @@ a {
   margin: 1em 0;
   animation: glow 2s infinite alternate;
 }
+
+@media (max-width: 466px) {
+  .unstoppable h1 {
+    font-size: 3em;
+  }
+}
+
 @keyframes glow {
   0% {
     text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
