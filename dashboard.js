@@ -128,6 +128,7 @@ const swiper = new Swiper(".slider-wrapper", {
 
 ////
 
+//chatbot ka code
 // // courses array
 const courses = [
   { name: "Web Development", price: 200 },

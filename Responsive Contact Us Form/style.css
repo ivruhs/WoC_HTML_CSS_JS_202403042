@@ -71,7 +71,7 @@ html {
 
 /*--------------- Navbar ki styling -----------------------*/
 header {
-  z-index: 5;
+  z-index: 600;
   width: 100%;
   position: fixed;
   background: #2c2b2b;

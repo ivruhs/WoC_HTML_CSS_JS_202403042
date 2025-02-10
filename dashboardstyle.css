@@ -64,7 +64,7 @@ section .section-title::after {
 
 /************************************      Navbar Styling    ******************************/
 header {
-  z-index: 300;
+  z-index: 600;
   width: 100%;
   position: fixed;
   background: #2c2b2b;

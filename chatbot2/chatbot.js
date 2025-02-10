@@ -1,5 +1,5 @@
 // courses array
-const courses = [
+const courses1 = [
   { name: "Web Development", price: 200 },
   { name: "Video Editing", price: 250 },
   { name: "Intro to Data Analytics", price: 0 },
@@ -75,7 +75,7 @@ function displayMessage(message, sender) {
 function displayCourses() {
   const courseList = document.createElement("ul");
   courseList.className = "course-list";
-  courses.forEach((course) => {
+  courses1.forEach((course) => {
     const listItem = document.createElement("li");
     listItem.textContent = course.name;
     listItem.addEventListener("click", () => {
