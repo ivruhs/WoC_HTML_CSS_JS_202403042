@@ -20,7 +20,7 @@
   text-align: center;
 }
 .hero h1 {
-  font-size: 3em;
+  font-size: 3rem;
   z-index: 1;
 }
 .hero::before {
@@ -229,6 +229,9 @@
 
   .swiper-slide p {
     font-size: 0.9em;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
   }
 }
 

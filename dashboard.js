@@ -190,15 +190,16 @@ function startChat() {
 // message will be the string, i.e. greeting,course details, etc
 // sender will either be bot or the user, according to sender apply the class (line-59)
 function displayMessage(message, sender) {
-  const messageDiv = document.createElement("div"); // div to hold msg
-  messageDiv.className = sender === "bot" ? "bot-message" : "user-message"; // setting class acc to sender
-  messageDiv.textContent = message; // setting the content
-  chatMessages.appendChild(messageDiv); // appending the messageDiv to chatMessages container
-  //   chatMessages.scrollTop = chatMessages.scrollHeight; // enusring that interface automatically scrolls to the bottom whenever a new msg is added
-  // Ensure the chat is scrolled to the bottom
+  const messageDiv = document.createElement("div");
+  messageDiv.className = sender === "bot" ? "bot-message" : "user-message";
+  messageDiv.textContent = message;
+  chatMessages.appendChild(messageDiv);
+
+  // Scroll the scrollable container (#chatbot-body) to the bottom
   setTimeout(() => {
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-  }, 0); // Delay to ensure the new message is added before scrolling
+    const chatBody = document.getElementById("chatbot-body");
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }, 0);
 }
 
 // to display the list of courses that the user can choose from
