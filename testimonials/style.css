@@ -194,6 +194,7 @@
   font-size: 1em;
   cursor: pointer;
   transition: background 0.3s;
+  margin-top: 10px;
 }
 
 .form-container .close {
@@ -205,6 +206,7 @@
   font-size: 1em;
   cursor: pointer;
   transition: 0.3s;
+  margin-top: 10px;
 }
 
 #addReview {
@@ -824,4 +826,21 @@ ul.course-list li:hover {
     font-size: 12px;
     padding: 8px;
   }
+}
+
+select {
+  width: 150px; /* Adjust width as needed */
+  height: 40px; /* Increase height */
+  font-size: 16px; /* Increase font size */
+  padding: 5px; /* Add some padding */
+  border: 2px solid #007bff; /* Blue border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f8f9fa; /* Light background */
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: #0056b3; /* Darker blue on focus */
+  box-shadow: 0 0 5px rgba(0, 91, 187, 0.5);
 }
